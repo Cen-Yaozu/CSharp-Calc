@@ -57,6 +57,7 @@ namespace Calc
             button_mod.Click += eh2;
         }
 
+        #region 按钮事件
         private void CalcForm_Load(object sender, EventArgs e)
         {
 
@@ -137,7 +138,10 @@ namespace Calc
             //功能实现代码位于Operators_Click（）函数
         }
 
+        #endregion
 
+
+        #region 等于号功能函数
         //****等于号=
         private void button_enter_Click(object sender, EventArgs e)
         {
@@ -178,7 +182,9 @@ namespace Calc
             bDotClicked = false;
             lastDecimalNum = 1;
         }
+        #endregion
 
+        #region 清空按钮功能函数
         //****清空键CE
         private void button_ce_Click(object sender, EventArgs e)
         {
@@ -194,7 +200,9 @@ namespace Calc
             //清空页面显示
             txtOutput.Text = "";
         }
+#endregion
 
+        #region 小数点功能函数
         //****小数点.
         private void button_dot_Click(object sender, EventArgs e)
         {
@@ -205,7 +213,10 @@ namespace Calc
                 bDotClicked = true;
             }
         }
+        #endregion
 
+
+        #region 0-9按钮功能函数
         //集中处理按钮点击事件
         //****数字按钮0-9
         private void Numbers_Click(object sender, EventArgs e)
@@ -243,7 +254,10 @@ namespace Calc
             txtOutput.Text = strOutput;
 
         }
+#endregion
 
+
+        #region 计算按钮功能函数
         //集中处理按钮点击事件
         //****操作符+、-、*、/、%
         private void Operators_Click(object sender, EventArgs e)
@@ -264,6 +278,6 @@ namespace Calc
             //存储小数点后的数字
             lastDecimalNum = 1;
         }
-
+#endregion
     }
 }
